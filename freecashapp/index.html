@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- TikTok Pixel Code Start -->
+    <script>
+    !function (w, d, t) {
+        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+        var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+        
+        ttq.load('D4M5GRRC77U10O2JF9J0');
+        ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+    
+    <link rel="icon" type="image/x-icon" href="https://imgur.com/d4rEH4U">
+    <link rel="apple-touch-icon" href="https://imgur.com/d4rEH4U">
+    <title>Freecash - Download App</title>
+    
+    <style>
+        /* ==================================== */
+        /* ===== COLORS & VARIABLES (FREECASH: DEEP BLACK/NEON GREEN) ===== */
+        /* ==================================== */
+        :root{
+            /* Cores Freecash */
+            --bg: #05050A;            /* Background Deep Black */
+            --text: #f0f6ff;          /* High contrast text (White) */
+            --muted: #9AA0AE;         /* Muted text */
+            --brand: #00ff88;         /* Primary Brand Color (Neon Green) */
+            --brand2: #00d175;        /* Secondary Brand Color (Darker Green) */
+            --accent-red: #ff4757;    /* Warning/Highlight */
+            /* Elementos */
+            --bg-card: #0E0E14;       /* Card background */
+            --border: #1a1a27;        /* Subtle borders */
+            --brand-glow: rgba(0,255,136,0.25); /* Glow effect */
+        }
+
+        /* Reset and Base Styling */
+        *{box-sizing:border-box}
+        html,body{margin:0;height:100%}
+        body{
+            color:var(--text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x:hidden;
+            min-height:100vh;
+            line-height:1.47059;
+            font-weight:400;
+            letter-spacing:-.022em;
+            /* Background Freecash */
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(circle at 10% 80%, rgba(0,255,136,.08) 0%, transparent 45%),
+                radial-gradient(circle at 90% 20%, rgba(0,255,136,.05) 0%, transparent 45%),
+                linear-gradient(to top, rgba(0,0,0,0.1), transparent);
+            position: relative;
+        }
+
+        /* Animated background elements */
+        .bg-orb{
+            position:fixed;
+            border-radius:50%;
+            filter:blur(80px);
+            opacity:.3;
+            pointer-events:none;
+            z-index:0;
+        }
+        .orb1{
+            width:400px;height:400px;
+            background:radial-gradient(circle, rgba(0,255,136,.4), transparent);
+            top:-100px;left:-100px;
+            animation:float1 20s ease-in-out infinite;
+        }
+        .orb2{
+            width:300px;height:300px;
+            background:radial-gradient(circle, rgba(0,213,117,.3), transparent);
+            bottom:-50px;right:-50px;
+            animation:float2 15s ease-in-out infinite;
+        }
+
+        @keyframes float1{
+            0%, 100%{transform:translate(0,0) scale(1);}
+            50%{transform:translate(50px,50px) scale(1.1);}
+        }
+        @keyframes float2{
+            0%, 100%{transform:translate(0,0) scale(1);}
+            50%{transform:translate(-30px,-40px) scale(1.15);}
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 60px 20px 40px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Logo Styling - Partnership Design */
+        .logo-wrapper{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap: 16px;
+            margin:0 auto 20px;
+        }
+        
+        .logo-container {
+            width:70px;
+            height:70px;
+            border-radius:20px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:rgba(0,255,136,.1);
+            border:1px solid rgba(0,255,136,.3);
+            box-shadow:0 10px 40px rgba(0,255,136,.4);
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-container:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo{
+            width:70px;
+            height:70px;
+            object-fit:cover;
+            border-radius:20px;
+        }
+        
+        .partnership-x {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, var(--brand) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 8px rgba(0,255,136,.5);
+            animation: pulse-x 2s ease-in-out infinite;
+            user-select: none;
+        }
+        
+        @keyframes pulse-x {
+            0%, 100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 8px rgba(0,255,136,.4));
+            }
+            50% { 
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 16px rgba(0,255,136,.6));
+            }
+        }
+
+        /* Section Transition Styles */
+        .section {
+            opacity: 1;
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        }
+
+        .section.fade-out {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .section.hidden {
+            display: none;
+        }
+
+        .section.fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Main Title */
+        .main-title {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin: 0 0 16px 0;
+            background: linear-gradient(135deg, #fff 0%, var(--brand) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(0,255,136,.3);
+        }
+
+        /* Question Subtitle */
+        .question-subtitle {
+            font-size: 17px;
+            line-height: 1.5;
+            color: var(--muted);
+            margin: 0 0 40px 0;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Age Selection Buttons */
+        .age-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .age-btn {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 20px 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .age-btn:hover {
+            border-color: var(--brand);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,255,136,.2);
+        }
+
+        .age-btn.primary {
+            border-color: var(--brand);
+            background: linear-gradient(135deg, rgba(0,255,136,.05) 0%, transparent 100%);
+        }
+
+        .age-btn-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .age-btn-subtitle {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+
+        /* You're In Section */
+        .youre-in-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 32px 0 24px;
+        }
+
+        .check-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(0,255,136,.15);
+            border: 2px solid var(--brand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0,255,136,.3);
+        }
+
+        .check-circle svg {
+            width: 32px;
+            height: 32px;
+            color: var(--brand);
+        }
+
+        .youre-in-text {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--text);
+            line-height: 1;
+        }
+
+        .text-neon {
+            color: var(--brand);
+        }
+
+        /* Subtitle */
+        .subtitle {
+            font-size: 17px;
+            line-height: 1.5;
+            color: var(--muted);
+            margin: 0 0 32px 0;
+            padding: 0 20px;
+        }
+
+        /* CTA Button */
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--brand);
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 18px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0,255,136,.5);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 40px rgba(0,255,136,.6);
+        }
+
+        .cta-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Card */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .li {
+            display: flex;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .li:last-child {
+            border-bottom: none;
+        }
+
+        .check {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(0,255,136,.15);
+            border: 2px solid var(--brand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--brand);
+            flex-shrink: 0;
+        }
+
+        .li b {
+            font-size: 16px;
+            color: var(--text);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .muted-text {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+
+        /* Activation Notice */
+        .activation-notice {
+            background: linear-gradient(135deg, rgba(0,255,136,.08) 0%, transparent 100%);
+            border: 1px solid rgba(0,255,136,.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .activation-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .lock-icon {
+            font-size: 24px;
+        }
+
+        .activation-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .activation-text {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .highlight-green {
+            color: var(--brand);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .foot {
+            font-size: 12px;
+            color: var(--muted);
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 40px;
+            }
+            .youre-in-text {
+                font-size: 40px;
+            }
+            .container {
+                padding: 40px 16px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Orbs -->
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+
+    <div class="container">
+        <!-- FIRST STEP: Age Selection -->
+        <section class="section" id="firstStep">
+            <!-- Logo Partnership -->
+            <div class="logo-wrapper">
+                <div class="logo-container">
+                    <img class="logo" src="logo-do-tik-tok_578229-290.jpg" alt="TikTok Logo" />
+                </div>
+                <span class="partnership-x">×</span>
+                <div class="logo-container">
+                    <img class="logo" src="https://imgur.com/d4rEH4U" alt="Freecash Logo" />
+                </div>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="main-title">Get Paid to Scroll</h1>
+
+            <!-- Subtitle -->
+            <p class="question-subtitle">Join thousands earning daily by watching TikTok videos<br>and cashing out instantly.</p>
+
+            <!-- Age Selection Buttons -->
+            <div class="age-buttons">
+                <button class="age-btn primary" onclick="selectAge('over21')">
+                    <div class="age-btn-title">I'm over 21</div>
+                    <div class="age-btn-subtitle">Instant Payouts: PayPal, CashApp, Venmo, Crypto & Wire</div>
+                </button>
+                <button class="age-btn" onclick="selectAge('under21')">
+                    <div class="age-btn-title">I'm under 21</div>
+                    <div class="age-btn-subtitle">Limited Payouts: Wire Transfer Only</div>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECOND STEP: You're In! -->
+        <section class="section hidden" id="secondStep">
+            <!-- Logo Partnership -->
+            <div class="logo-wrapper">
+                <div class="logo-container">
+                    <img class="logo" src="logo-do-tik-tok_578229-290.jpg" alt="TikTok Logo" />
+                </div>
+                <span class="partnership-x">×</span>
+                <div class="logo-container">
+                    <img class="logo" src="https://imgur.com/d4rEH4U" alt="Freecash Logo" />
+                </div>
+            </div>
+
+            <!-- You're In! Section -->
+            <div class="youre-in-section">
+                <div class="check-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <div class="youre-in-text">
+                    You're <span class="text-neon">In!</span>
+                </div>
+            </div>
+
+            <!-- Subtitle -->
+            <p class="subtitle" style="margin-bottom: 32px; padding: 0;">
+                Your account is pre-qualified for higher payouts. Download the app to activate full access.
+            </p>
+
+            <!-- CTA (Main Button) -->
+            <a id="cta" class="cta" href="#" onclick="handleClick(event)">
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Download Now
+            </a>
+
+            <!-- Card: Earning Journey Steps -->
+            <div class="card">
+                 <!-- Title -->
+                <div class="section-title">YOUR EARNING JOURNEY</div>
+
+                <!-- Lista de Passos -->
+                <div class="li">
+                    <span class="check">1</span>
+                    <div>
+                        <b>Download the Freecash App</b>
+                        <div class="muted-text">Available on iOS & Android - Takes less than 60 seconds</div>
+                    </div>
+                </div>
+                <div class="li">
+                    <span class="check">2</span>
+                    <div>
+                        <b>Complete Daily Offers</b>
+                        <div class="muted-text">Watch Netflix, scroll TikTok, test apps & games, or take surveys!</div>
+                    </div>
+                </div>
+                <div class="li" style="border-bottom: none;">
+                    <span class="check">3</span>
+                    <div>
+                        <b>Cash Out Your Earnings</b>
+                        <div class="muted-text" id="payoutText">Instant Payouts: PayPal, CashApp, Venmo, Crypto & Wire</div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Card -->
+
+            <!-- Activation Required Notice -->
+            <div class="activation-notice">
+                <div class="activation-header">
+                    <span class="lock-icon">🔓</span>
+                    <span class="activation-title">Activation Required</span>
+                </div>
+                <p class="activation-text">
+                    New users: Complete <span class="highlight-green">2 quick offers</span> to unlock full access and start earning with TikTok videos.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="foot">Trusted by over 500,000 users earning money daily</div>
+        </section>
+
+    </div>
+
+    <script>
+    // ========================================
+    // ANTI-DETECTION & CONSOLE PROTECTION
+    // ========================================
+    (function() {
+        'use strict';
+        
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Detect and block DevTools
+        const devtools = /./;
+        devtools.toString = function() {
+            this.opened = true;
+        };
+        
+        // Console protection
+        const noop = function() {};
+        const methods = ['log', 'debug', 'info', 'warn', 'error', 'table', 'trace', 'clear'];
+        
+        // Store original console methods
+        const originalConsole = {};
+        methods.forEach(function(method) {
+            originalConsole[method] = console[method];
+        });
+        
+        // Override console methods in production
+        if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+            methods.forEach(function(method) {
+                console[method] = noop;
+            });
+        }
+        
+        // Restore console for our own logging
+        window._console = originalConsole;
+        
+        // Use this for internal logging: window._window._console.log() instead of window._console.log()
+    })();
+
+    // ========================================
+    // FREECASH - AGE SELECTION & SUBID TRACKING
+    // ========================================
+
+    let selectedAge = '';
+    let subID = '';
+    let ttclid = '';
+
+    // ========================================
+    // OS DETECTION
+    // ========================================
+    function detectOS() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            return 'iOS';
+        }
+        if (/android/i.test(userAgent)) {
+            return 'Android';
+        }
+        return 'Other';
+    }
+
+    // ========================================
+    // TTCLID EXTRACTION (TikTok Click ID)
+    // ========================================
+    function getTtclid() {
+        // Check URL parameters first
+        const urlParams = new URLSearchParams(window.location.search);
+        let ttclidValue = urlParams.get('ttclid');
+        if (ttclidValue) {
+            window._console.log('✅ TTCLID found in URL:', ttclidValue);
+            return ttclidValue;
+        }
+
+        // Check cookies
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+            const [name, value] = cookie.trim().split('=');
+            if (name === 'ttclid' && value) {
+                window._console.log('✅ TTCLID found in cookies:', value);
+                return decodeURIComponent(value);
+            }
+        }
+
+        // Check TikTok pixel object
+        if (window.ttq && window.ttq._i && window.ttq._i['D4M5GRRC77U10O2JF9J0']) {
+            try {
+                const pixelData = window.ttq._i['D4M5GRRC77U10O2JF9J0'];
+                if (pixelData && pixelData.ttclid) {
+                    window._console.log('✅ TTCLID found in pixel data:', pixelData.ttclid);
+                    return pixelData.ttclid;
+                }
+            } catch (e) {
+                window._console.warn('⚠️ Error extracting TTCLID from pixel:', e);
+            }
+        }
+
+        window._console.log('⚠️ No TTCLID found');
+        return null;
+    }
+
+    // ========================================
+    // URL TRANSFORMATION FOR MOBILE OS
+    // ========================================
+    function transformUrlForOS(url) {
+        try {
+            const os = detectOS();
+            const urlObj = new URL(url);
+
+            if (os === 'iOS') {
+                // iOS: Use universal link format (opens in Safari)
+                return url;
+            } else if (os === 'Android') {
+                // Android: Use intent:// protocol to escape in-app browser
+                const scheme = urlObj.protocol.replace(':', '');
+                const host = urlObj.hostname;
+                const path = urlObj.pathname + urlObj.search;
+                
+                return `intent://${host}${path}#Intent;scheme=${scheme};action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end`;
+            }
+
+            return url; // Desktop or other - return as-is
+        } catch (e) {
+            window._console.warn('⚠️ URL transformation failed:', e);
+            return url; // Fallback to original URL
+        }
+    }
+
+    // Extract SubID from URL parameters on page load
+    function getSubID() {
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Try multiple common parameter names for SubID
+        const possibleParams = ['subID', 'subid', 'sub_id', 'sub', 's1', 's2', 'source'];
+        
+        for (let param of possibleParams) {
+            const value = urlParams.get(param);
+            if (value) {
+                window._console.log(`✅ SubID found from parameter "${param}":`, value);
+                return value;
+            }
+        }
+        
+        window._console.log('⚠️ No SubID found in URL parameters');
+        return '';
+    }
+
+    // Initialize SubID and TTCLID on page load
+    subID = getSubID();
+    ttclid = getTtclid();
+
+    // ========================================
+    // FIRE VIEWCONTENT EVENT ON PAGE LOAD
+    // ========================================
+    (function() {
+        try {
+            const viewContentData = {
+                content_type: 'product',
+                content_id: 'freecash-tiktok-rewards',
+                value: 0.49,
+                currency: 'USD'
+            };
+            
+            // Add TTCLID if available
+            if (ttclid) {
+                viewContentData.ttclid = ttclid;
+            }
+            
+            ttq.track('ViewContent', viewContentData);
+            window._console.log('✅ ViewContent event fired on page load');
+        } catch (e) {
+            window._console.warn('⚠️ ViewContent tracking failed:', e);
+        }
+    })();
+
+    function selectAge(age) {
+        selectedAge = age;
+        window._console.log('🎂 Age selected:', age);
+        window._console.log('🔖 SubID:', subID);
+        
+        const firstStep = document.getElementById('firstStep');
+        const secondStep = document.getElementById('secondStep');
+        
+        // Update payout text based on age
+        const payoutText = document.getElementById('payoutText');
+        if (age === 'under21') {
+            payoutText.textContent = 'Limited Payouts: Wire Transfer Only';
+        } else {
+            payoutText.textContent = 'Instant Payouts: PayPal, CashApp, Venmo, Crypto & Wire';
+        }
+        
+        // Fade out first step
+        firstStep.classList.add('fade-out');
+        
+        // Wait for fade out animation to complete
+        setTimeout(() => {
+            firstStep.classList.add('hidden');
+            secondStep.classList.remove('hidden');
+            
+            // Force reflow to ensure animation triggers
+            void secondStep.offsetWidth;
+            
+            // Trigger fade in animation
+            secondStep.classList.add('fade-in');
+        }, 400);
+    }
+
+    // ========================================
+    // BUILD REDIRECT URLs WITH SUBID (both s1 and s2)
+    // ========================================
+
+    function buildRedirectUrl(age, subID) {
+        let baseUrl = '';
+        
+        if (age === 'over21') {
+            // RewardOrbit - uses both &s1= and &s2= for SubID
+            baseUrl = 'https://rewardorbit.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidSI6IjY5NjM1OTE2MTFjOTZjMzMzNDEzMWJjYSIsInRzIjoxNzY4ODU3Mjk1OTczfQ';
+        } else if (age === 'under21') {
+            // Afftrackr - uses both &s1= and &s2= for SubID
+            baseUrl = 'https://t.afftrackr.com/?oex3=JG1Y6Vp0LH%2bbjh3bjrn51TXGZpjGMHexvQJDRoz7h5U%3d';
+        }
+        
+        // Append both s1 and s2 parameters if SubID is available
+        if (subID) {
+            const separator = baseUrl.includes('?') ? '&' : '?';
+            return `${baseUrl}${separator}s1=${encodeURIComponent(subID)}&s2=${encodeURIComponent(subID)}`;
+        }
+        
+        return baseUrl;
+    }
+
+    // ========================================
+    // TIKTOK TRACKING - CLIENT-SIDE ONLY
+    // Fires AddToCart, CompleteRegistration, Purchase, and CompletePurchase on final button
+    // ViewContent fires separately on page load
+    // ========================================
+
+    function handleClick(event) {
+        event.preventDefault();
+        window._console.log('🚀 Final button clicked! Firing client-side events...');
+
+        // CLIENT-SIDE - 4 events with TTCLID
+        try {
+            // Prepare event data with optional TTCLID
+            const getEventData = (value) => {
+                const data = {
+                    content_type: 'product',
+                    content_id: 'freecash-tiktok-rewards',
+                    value: value,
+                    currency: 'USD'
+                };
+                
+                // Add TTCLID if available
+                if (ttclid) {
+                    data.ttclid = ttclid;
+                }
+                
+                return data;
+            };
+
+            // Event 1: AddToCart
+            ttq.track('AddToCart', getEventData(1.00));
+
+            // Event 2: CompleteRegistration (value = $0.49)
+            ttq.track('CompleteRegistration', getEventData(0.49));
+
+            // Event 3: Purchase
+            ttq.track('Purchase', getEventData(1.00));
+
+            // Event 4: CompletePurchase (value = $0.49)
+            ttq.track('CompletePurchase', getEventData(0.49));
+
+            window._console.log('✅ Client-side: AddToCart, CompleteRegistration, Purchase, and CompletePurchase OK');
+            if (ttclid) {
+                window._console.log('✅ TTCLID attached to all events:', ttclid);
+            }
+        } catch (e) {
+            window._console.warn('⚠️ Client-side tracking failed:', e);
+        }
+
+        // Build redirect URL with SubID
+        const baseRedirectUrl = buildRedirectUrl(selectedAge, subID);
+        
+        // Apply OS transformation for mobile browsers
+        const finalRedirectUrl = transformUrlForOS(baseRedirectUrl);
+        
+        window._console.log('🔀 Redirecting to:', finalRedirectUrl);
+        window._console.log('📊 Age:', selectedAge, '| SubID:', subID, '| TTCLID:', ttclid || 'None', '| OS:', detectOS());
+        
+        // Redirect
+        window.location.href = finalRedirectUrl;
+    }
+
+    </script>
+</body>
+</html>
