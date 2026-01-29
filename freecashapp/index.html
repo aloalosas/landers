@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +20,8 @@
     </script>
     <!-- TikTok Pixel Code End -->
     
-    <link rel="icon" type="image/x-icon" href="https://imgur.com/d4rEH4U">
-    <link rel="apple-touch-icon" href="https://imgur.com/d4rEH4U.png">
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/d4rEH4U.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/d4rEH4U.png">
     <title>Freecash - Download App</title>
     
     <style>
@@ -222,10 +223,10 @@
         }
 
         .age-btn {
-            background: var(--bg-card);
-            border: 2px solid var(--border);
+            background: #1a1d28;
+            border: 2px solid transparent;
             border-radius: 16px;
-            padding: 20px 24px;
+            padding: 24px 24px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: left;
@@ -234,26 +235,39 @@
         }
 
         .age-btn:hover {
-            border-color: var(--brand);
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0,255,136,.2);
         }
 
         .age-btn.primary {
-            border-color: var(--brand);
-            background: linear-gradient(135deg, rgba(0,255,136,.05) 0%, transparent 100%);
+            background: var(--brand);
+            border-color: transparent;
+            box-shadow: 0 4px 20px rgba(0,255,136,.4);
+        }
+
+        .age-btn.primary:hover {
+            background: #00e67a;
+            box-shadow: 0 8px 30px rgba(0,255,136,.5);
+        }
+
+        .age-btn.primary .age-btn-title {
+            color: #000;
+        }
+
+        .age-btn.primary .age-btn-subtitle {
+            color: #0a4d2e;
         }
 
         .age-btn-title {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 700;
             color: var(--text);
             margin-bottom: 8px;
         }
 
         .age-btn-subtitle {
-            font-size: 14px;
-            color: var(--muted);
+            font-size: 15px;
+            color: #7a7f8f;
             line-height: 1.4;
         }
 
@@ -411,41 +425,67 @@
 
         /* Activation Notice */
         .activation-notice {
-            background: linear-gradient(135deg, rgba(0,255,136,.08) 0%, transparent 100%);
-            border: 1px solid rgba(0,255,136,.2);
-            border-radius: 12px;
-            padding: 20px;
+            background: linear-gradient(135deg, rgba(255,71,87,.1) 0%, rgba(0,0,0,0.3) 100%);
+            border: 2px solid rgba(255,71,87,.5);
+            border-radius: 16px;
+            padding: 24px;
             margin-bottom: 24px;
             text-align: left;
+            position: relative;
         }
 
         .activation-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
             gap: 12px;
-            margin-bottom: 12px;
+        }
+
+        .activation-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .important-badge {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 12px rgba(255,71,87,.4);
         }
 
         .lock-icon {
-            font-size: 24px;
+            font-size: 28px;
+            filter: drop-shadow(0 2px 8px rgba(255,255,255,.3));
         }
 
         .activation-title {
-            font-size: 16px;
+            font-size: 22px;
             font-weight: 700;
             color: var(--text);
+            line-height: 1.2;
         }
 
         .activation-text {
-            font-size: 14px;
-            color: var(--muted);
-            line-height: 1.5;
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.6;
             margin: 0;
         }
 
         .highlight-green {
             color: var(--brand);
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 17px;
         }
 
         /* Footer */
@@ -485,7 +525,7 @@
                 </div>
                 <span class="partnership-x">×</span>
                 <div class="logo-container">
-                    <img class="logo" src="https://imgur.com/d4rEH4U" alt="Freecash Logo" />
+                    <img class="logo" src="https://i.imgur.com/d4rEH4U.png" alt="Freecash Logo" />
                 </div>
             </div>
 
@@ -517,7 +557,7 @@
                 </div>
                 <span class="partnership-x">×</span>
                 <div class="logo-container">
-                    <img class="logo" src="https://imgur.com/d4rEH4U" alt="Freecash Logo" />
+                    <img class="logo" src="https://i.imgur.com/d4rEH4U.png" alt="Freecash Logo" />
                 </div>
             </div>
 
@@ -579,8 +619,13 @@
             <!-- Activation Required Notice -->
             <div class="activation-notice">
                 <div class="activation-header">
-                    <span class="lock-icon">🔓</span>
-                    <span class="activation-title">Activation Required</span>
+                    <div class="activation-header-left">
+                        <span class="lock-icon">🔓</span>
+                        <span class="activation-title">Activation Required</span>
+                    </div>
+                    <span class="important-badge">
+                        ⚠️ IMPORTANT
+                    </span>
                 </div>
                 <p class="activation-text">
                     New users: Complete <span class="highlight-green">2 quick offers</span> to unlock full access and start earning with TikTok videos.
@@ -802,24 +847,27 @@
     }
 
     // ========================================
-    // BUILD REDIRECT URLs WITH SUBID (both s1 and s2)
+    // BUILD REDIRECT URLs WITH SUBID
     // ========================================
 
     function buildRedirectUrl(age, subID) {
         let baseUrl = '';
+        let paramName = '';
         
         if (age === 'over21') {
-            // RewardOrbit - uses both &s1= and &s2= for SubID
-            baseUrl = 'https://rewardorbit.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidSI6IjY5NjdkNDgxNWNhYTVjNjc4NWYwNTc4NSIsInRzIjoxNzY5MTk2MDM5OTU4fQ';
+            // RewardOrbit - uses &s2= for SubID only
+            baseUrl = 'https://rewardorbit.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidSI6IjY5NjdkNDgxNWNhYTVjNjc4NWYwNTc4NSIsInRzIjoxNzY5NzEzMjQyNzQ5fQ';
+            paramName = 's2';
         } else if (age === 'under21') {
-            // Afftrackr - uses both &s1= and &s2= for SubID
-            baseUrl = 'https://rewardorbit.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidSI6IjY5NjdkNDgxNWNhYTVjNjc4NWYwNTc4NSIsInRzIjoxNzY5MTk2MDM5OTU4fQ';
+            // Afftrackr - uses &s1= for SubID only
+            baseUrl = 'https://rewardorbit.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidSI6IjY5NjdkNDgxNWNhYTVjNjc4NWYwNTc4NSIsInRzIjoxNzY5NzEzMjQyNzQ5fQ';
+            paramName = 's2';
         }
         
-        // Append both s1 and s2 parameters if SubID is available
+        // Append SubID parameter if available
         if (subID) {
             const separator = baseUrl.includes('?') ? '&' : '?';
-            return `${baseUrl}${separator}s1=${encodeURIComponent(subID)}&s2=${encodeURIComponent(subID)}`;
+            return `${baseUrl}${separator}${paramName}=${encodeURIComponent(subID)}`;
         }
         
         return baseUrl;
