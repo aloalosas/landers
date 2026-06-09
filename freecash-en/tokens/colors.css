@@ -1,0 +1,85 @@
+/* ============================================================
+   Freecash Lander — Color Tokens
+   Dark, high-contrast, neon-green conversion theme.
+   Base palette is lifted verbatim from the production lander
+   :root block; semantic aliases are layered on top.
+   ============================================================ */
+
+:root {
+  /* ---------- Base: surfaces (near-black, warm-neutral) ---------- */
+  --fc-black:        #000000;
+  --fc-bg:           #0a0a0a;  /* page background          */
+  --fc-bg-panel:     #141414;  /* panel / deep card base   */
+  --fc-surface-1:    #1a1a1a;  /* raised card (gradient hi)*/
+  --fc-surface-2:    #222222;  /* hover / active surface   */
+  --fc-surface-3:    #2a2a2a;  /* timer top gradient stop  */
+
+  /* ---------- Base: brand green ---------- */
+  --fc-green:        #00d369;  /* primary brand / CTA      */
+  --fc-green-neon:   #33ff90;  /* hover / glow accent      */
+  --fc-green-050:    rgba(0, 211, 105, 0.05);
+  --fc-green-010:    rgba(0, 211, 105, 0.10);
+  --fc-green-015:    rgba(0, 211, 105, 0.15);
+  --fc-green-020:    rgba(0, 211, 105, 0.20);
+  --fc-green-030:    rgba(0, 211, 105, 0.30);
+  --fc-green-040:    rgba(0, 211, 105, 0.40);
+
+  /* ---------- Base: text ---------- */
+  --fc-white:        #ffffff;
+  --fc-text-mute:    #888888;  /* secondary copy           */
+  --fc-text-faint:   #666666;  /* labels / captions        */
+  --fc-text-ghost:   #555555;  /* dev tag / micro          */
+  --fc-ccc:          #cccccc;  /* viral subhead            */
+
+  /* ---------- Base: lines ---------- */
+  --fc-line:         #333333;  /* default card border      */
+  --fc-line-soft:    #444444;  /* muted / locked border    */
+  --fc-line-050:     rgba(255, 255, 255, 0.05);
+  --fc-line-080:     rgba(255, 255, 255, 0.08);
+  --fc-line-010:     rgba(255, 255, 255, 0.10);
+
+  /* ---------- Base: accent themes ---------- */
+  --fc-gold:         #cfaa56;  /* "viral" payout theme     */
+  --fc-gold-light:   #f2e2b3;
+  --fc-gold-bright:  #f2c94c;  /* viral CTA gradient top   */
+  --fc-gold-shadow:  #8a6d2b;  /* viral CTA hard shadow    */
+  --fc-apple-blue:   #0071e3;  /* Apple Pay variant CTA    */
+  --fc-apple-blue-d: #0051a2;  /* Apple Pay hover          */
+  --fc-red:          #ff3b3b;  /* urgency / scarcity       */
+  --fc-star:         #ffffff;  /* rating stars (white)     */
+
+  /* ---------- Base: light surfaces (Apple Pay card) ---------- */
+  --fc-paper:        #ffffff;
+  --fc-paper-2:      #f5f5f7;
+
+  /* ============================================================
+     Semantic aliases — prefer these in components
+     ============================================================ */
+  --surface-page:     var(--fc-bg);
+  --surface-panel:    var(--fc-bg-panel);
+  --surface-card:     var(--fc-surface-1);
+  --surface-card-hi:  var(--fc-surface-2);
+  --surface-paper:    var(--fc-paper);
+
+  --text-primary:     var(--fc-white);
+  --text-secondary:   var(--fc-text-mute);
+  --text-caption:     var(--fc-text-faint);
+  --text-on-brand:    var(--fc-white);     /* CTA label is white on green */
+  --text-on-paper:    var(--fc-black);
+
+  --brand:            var(--fc-green);
+  --brand-hover:      var(--fc-green-neon);
+  --brand-glow:       var(--fc-green-040);
+
+  --border-default:   var(--fc-line);
+  --border-muted:     var(--fc-line-soft);
+  --border-brand:     var(--fc-green);
+
+  --accent-gold:      var(--fc-gold);
+  --accent-apple:     var(--fc-apple-blue);
+  --accent-urgent:    var(--fc-red);
+
+  /* Page background image layer (subtle green cross weave) */
+  --bg-pattern: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300d369' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --bg-page-image: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, var(--fc-bg) 100%), var(--bg-pattern);
+}

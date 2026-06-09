@@ -1,0 +1,57 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Buttons & Badges" subtitle="Pulsing CTAs (green / gold / apple) and inline labels" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="../../styles.css" rel="stylesheet">
+<style>
+  body { margin:0; background:var(--fc-bg); background-image:var(--bg-page-image); color:#fff; font-family:var(--font-sans); padding:28px; }
+  .grid { display:flex; flex-direction:column; gap:22px; max-width:440px; margin:0 auto; }
+  .lbl { font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--fc-text-faint); }
+  .badges { display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel" src="../../ds-preview-runtime.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  const { Button, Badge } = window.FreecashLanderDesignSystem_05d09e;
+  function Demo(){
+    return (
+      <div className="grid">
+        <div className="badges">
+          <Badge variant="logo">Freecash App</Badge>
+          <Badge variant="logo" white>Step Complete</Badge>
+          <Badge variant="step">1 / 2</Badge>
+          <Badge variant="tint">NEW</Badge>
+          <Badge variant="alert">⚡ Limited spots</Badge>
+        </div>
+        <div>
+          <div className="lbl">Primary · arrow</div>
+          <Button href="#" arrow>Download &amp; Start Earning</Button>
+        </div>
+        <div>
+          <div className="lbl">Gold · viral</div>
+          <Button variant="gold">Claim Your Reward</Button>
+        </div>
+        <div>
+          <div className="lbl">Apple · blue</div>
+          <Button variant="apple" arrow>Claim Your $750 Reward</Button>
+        </div>
+        <div>
+          <div className="lbl">Sizes · md / sm</div>
+          <Button size="md">Continue</Button>
+          <div style={{height:10}}></div>
+          <Button size="sm" disabled>Redirecting…</Button>
+        </div>
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script>
+</body>
+</html>
