@@ -59,7 +59,7 @@ function Proof() {
 
 function HowItWorks() {
   const steps = [
-    { t: "Create your free account", d: "Sign up in under a minute — no purchase, no catch." },
+    { t: "Create your free account", d: "Sign up in under a minute; no purchase, no catch." },
     { t: "Complete offers, surveys & games", d: "Pick whatever you like and earn as you go, whenever you've got a few minutes." },
     { t: "Cash out your earnings", d: "Withdraw via PayPal, crypto, or a gift card once you hit the minimum." },
   ];
