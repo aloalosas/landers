@@ -137,7 +137,7 @@ function LanderEn() {
     <div className="en">
       <div className="en-top">
         <span className="en-logo">Free<b>cash</b></span>
-        <span className="en-ref-note">Independent referral page</span>
+        
       </div>
 
       <Hero />
