@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="700x200" name="Accent themes" subtitle="Variant accents — gold (viral), Apple blue, urgency red" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="../styles.css" rel="stylesheet">
+<style>
+  body { margin:0; background:var(--fc-bg); color:var(--fc-white); font-family:var(--font-sans); padding:22px; }
+  .row { display:flex; gap:14px; flex-wrap:wrap; }
+  .sw { display:flex; flex-direction:column; gap:8px; }
+  .chip { width:128px; height:76px; border-radius:var(--r-lg); border:1px solid var(--fc-line); }
+  .name { font-size:12px; font-weight:600; }
+  .hex { font-size:11px; color:var(--fc-text-mute); font-family:var(--font-mono); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:linear-gradient(to bottom,var(--fc-gold-bright),var(--fc-gold));"></div><div class="name">--fc-gold</div><div class="hex">#CFAA56 viral</div></div>
+    <div class="sw"><div class="chip" style="background:var(--fc-gold-light);"></div><div class="name">--fc-gold-light</div><div class="hex">#F2E2B3</div></div>
+    <div class="sw"><div class="chip" style="background:var(--fc-apple-blue);"></div><div class="name">--fc-apple-blue</div><div class="hex">#0071E3 Apple Pay</div></div>
+    <div class="sw"><div class="chip" style="background:var(--fc-red);"></div><div class="name">--fc-red</div><div class="hex">#FF3B3B urgency</div></div>
+    <div class="sw"><div class="chip" style="background:linear-gradient(135deg,var(--fc-paper-2),var(--fc-paper)); border-color:var(--fc-line-010);"></div><div class="name">--fc-paper</div><div class="hex">#FFF light card</div></div>
+  </div>
+</body>
+</html>
