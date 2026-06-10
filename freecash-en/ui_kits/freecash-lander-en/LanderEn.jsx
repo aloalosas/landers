@@ -4,7 +4,7 @@
 
    ⚠ PLACEHOLDER referral link — swap for your real tracked referral URL
    and keep all SubID / ttclid tracking params intact. */
-const REFERRAL_LINK = "https://your-referral-link.example/?s1=SUBID&s2=SUBID";
+const REFERRAL_LINK = "https://taprkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiYzhkMmUwY2YzODM0NDg2Mzc2NDgiLCJ0cyI6MTc4MDk5MzUxNDQ4M30";
 
 const { Button, StatPill } = window.FreecashLanderDesignSystem_05d09e;
 
