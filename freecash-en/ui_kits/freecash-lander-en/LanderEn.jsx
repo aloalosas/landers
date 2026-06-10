@@ -38,7 +38,7 @@ function Hero() {
       </p>
       <Button href={REFERRAL_LINK} arrow>Start earning on Freecash</Button>
       <p className="en-cta-note">
-        A simple way to earn extra cash in your spare time. Earnings vary and are not guaranteed.
+        A simple way to earn extra cash in your spare time.
       </p>
     </div>
   );
