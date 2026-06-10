@@ -1,0 +1,36 @@
+<!-- @dsCard group="Colors" viewport="700x190" name="Brand green" subtitle="Neon green — primary CTA, glow accents" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="../styles.css" rel="stylesheet">
+<style>
+  body { margin:0; background:var(--fc-bg); color:var(--fc-white); font-family:var(--font-sans); padding:22px; }
+  .row { display:flex; gap:14px; flex-wrap:wrap; }
+  .sw { display:flex; flex-direction:column; gap:8px; }
+  .chip { width:150px; height:80px; border-radius:var(--r-lg); border:1px solid var(--fc-line); }
+  .name { font-size:12px; font-weight:600; }
+  .hex { font-size:11px; color:var(--fc-text-mute); font-family:var(--font-mono); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw">
+      <div class="chip" style="background:var(--fc-green); box-shadow:var(--glow-md);"></div>
+      <div class="name">--fc-green</div><div class="hex">#00D369 · primary</div>
+    </div>
+    <div class="sw">
+      <div class="chip" style="background:var(--fc-green-neon); box-shadow:0 0 20px rgba(51,255,144,.4);"></div>
+      <div class="name">--fc-green-neon</div><div class="hex">#33FF90 · hover/glow</div>
+    </div>
+    <div class="sw">
+      <div class="chip" style="background:var(--fc-green-015); border-color:var(--fc-green-030);"></div>
+      <div class="name">--fc-green-015</div><div class="hex">tint fill</div>
+    </div>
+    <div class="sw">
+      <div class="chip" style="background:var(--fc-green-050); border-left:3px solid var(--fc-green);"></div>
+      <div class="name">--fc-green-050</div><div class="hex">accent wash</div>
+    </div>
+  </div>
+</body>
+</html>
