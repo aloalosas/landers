@@ -34,7 +34,7 @@ function Hero() {
       <h1 className="en-h1">Earn real cash in your <span className="en-hl">spare time</span></h1>
       <p className="en-sub">
         <b>Saw it on TikTok? It's real.</b> Freecash pays you to complete surveys,
-        try new apps, and play games — then cash out the same day, right from your phone.
+        try new apps, and play games then cash out the same day, right from your phone.
       </p>
       <Button href={REFERRAL_LINK} arrow>Start earning on Freecash</Button>
       <p className="en-cta-note">
@@ -106,7 +106,7 @@ function Faq() {
     {
       q: "How much can I earn?",
       a: (<>It varies. Freecash is a way to <b>earn extra cash in your spare time</b>, not a
-        salary or guaranteed income — what you make depends on the offers you choose to complete.</>),
+        salary or guaranteed income, what you make depends on the offers you choose to complete.</>),
     },
     {
       q: "How do I get paid?",
@@ -114,7 +114,7 @@ function Faq() {
     },
     {
       q: "Is it free to join?",
-      a: (<>Yes — creating an account and completing offers is completely free.</>),
+      a: (<>Yes, creating an account and completing offers is completely free.</>),
     },
   ];
   return (
