@@ -148,7 +148,7 @@ function LanderEn() {
       <HowItWorks />
       <Payouts />
 
-      <Button href={REFERRAL_LINK} arrow>Sign up now and receive $10.00 as a sign up bonus! 💸</Button>
+      <Button href={REFERRAL_LINK} arrow>Start earning on Freecash</Button>
 
       <Faq />
 
