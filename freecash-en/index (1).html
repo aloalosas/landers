@@ -1,0 +1,100 @@
+<!-- @dsCard group="Freecash Lander" viewport="480x1000" name="Freecash Lander (EN referral)" subtitle="English independent referral page — real proof, honest framing" -->
+<!-- @startingPoint section="Landers" subtitle="English referral lander — real proof, honest earnings, FAQ" viewport="480x1000" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freecash — Earn Real Cash in Your Spare Time</title>
+<link href="./styles.css" rel="stylesheet">
+<style>
+  html, body { margin:0; }
+  body {
+    background-color:var(--fc-bg);
+    background-image:var(--bg-page-image);
+    color:var(--fc-white);
+    font-family:var(--font-sans);
+    min-height:100vh;
+    display:flex; justify-content:center; align-items:flex-start;
+    padding:20px 15px 40px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .en { width:100%; max-width:480px; display:flex; flex-direction:column; gap:24px; }
+
+  /* top bar — plain wordmark, NO app badge */
+  .en-top { display:flex; justify-content:space-between; align-items:center; padding:0 2px; }
+  .en-logo { font-weight:800; font-size:18px; letter-spacing:-0.5px; color:#fff; }
+  .en-logo b { color:var(--fc-green); }
+  .en-ref-note { font-size:11px; color:var(--fc-text-faint); border:1px solid var(--fc-line); padding:4px 9px; border-radius:20px; }
+
+  /* hero */
+  .en-hero { display:flex; flex-direction:column; gap:16px; }
+  .en-h1 { font-size:40px; line-height:1.08; font-weight:800; letter-spacing:-1px; margin:0; color:#fff; text-wrap:balance; }
+  .en-hl { color:var(--fc-bg); background:var(--fc-green); padding:0 10px; border-radius:6px; display:inline-block; transform:rotate(-2deg); }
+  .en-sub { font-size:16px; color:var(--fc-text-mute); line-height:1.5; margin:0; }
+  .en-sub b { color:#fff; font-weight:600; }
+  .en-cta-note { font-size:12px; color:var(--fc-text-faint); text-align:center; line-height:1.5; margin:0; }
+
+  /* trustpilot badge — clean, inline */
+  .tp { display:inline-flex; align-items:center; gap:10px; align-self:flex-start;
+        background:rgba(255,255,255,.03); border:1px solid var(--fc-line-080); border-radius:10px; padding:8px 12px; }
+  .tp__stars { display:flex; gap:2px; }
+  .tp__star { width:18px; height:18px; background:var(--fc-green); display:flex; align-items:center; justify-content:center; border-radius:3px; }
+  .tp__star svg { width:12px; height:12px; fill:#0a0a0a; }
+  .tp__txt { font-size:13px; color:#fff; }
+  .tp__txt b { font-weight:700; }
+  .tp__txt span { color:var(--fc-text-mute); }
+
+  /* section heads */
+  .en-eyebrow { font-size:13px; font-weight:600; color:var(--fc-green); text-transform:uppercase; letter-spacing:1px; margin:0 0 14px; }
+
+  /* how it works */
+  .hiw { display:flex; flex-direction:column; gap:18px; }
+  .hiw__row { display:flex; gap:14px; align-items:flex-start; }
+  .hiw__num { width:30px; height:30px; flex-shrink:0; border-radius:50%; background:var(--fc-green); color:#0a0a0a;
+              font-weight:800; font-size:15px; display:flex; align-items:center; justify-content:center; box-shadow:var(--glow-sm); }
+  .hiw__t { font-size:16px; font-weight:600; color:#fff; margin:2px 0 2px; }
+  .hiw__d { font-size:14px; color:var(--fc-text-mute); line-height:1.5; margin:0; }
+
+  /* payout chips */
+  .pay { display:flex; flex-wrap:wrap; gap:10px; }
+  .pay__chip { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:#fff;
+               background:linear-gradient(145deg,#1a1a1a,#141414); border:1px solid var(--fc-line); border-radius:12px; padding:12px 16px; }
+  .pay__dot { width:8px; height:8px; border-radius:50%; background:var(--fc-green); box-shadow:var(--glow-dot); }
+
+  /* faq */
+  .faq { display:flex; flex-direction:column; gap:10px; }
+  .faq__item { background:linear-gradient(145deg,#1a1a1a,#141414); border:1px solid var(--fc-line); border-radius:14px; overflow:hidden; }
+  .faq__q { width:100%; text-align:left; background:none; border:none; color:#fff; font-family:var(--font-sans);
+            font-size:16px; font-weight:600; padding:18px; cursor:pointer; display:flex; justify-content:space-between; gap:12px; align-items:center; }
+  .faq__q::-webkit-details-marker { display:none; }
+  .faq__plus { color:var(--fc-green); font-size:20px; flex-shrink:0; transition:transform .2s; }
+  details[open] .faq__plus { transform:rotate(45deg); }
+  .faq__a { font-size:14px; color:var(--fc-text-mute); line-height:1.6; padding:0 18px 18px; margin:0; }
+  .faq__a b { color:#fff; font-weight:600; }
+
+  /* footer disclaimer */
+  .en-foot { font-size:11px; color:var(--fc-text-ghost); line-height:1.6; border-top:1px solid var(--fc-line); padding-top:18px; margin:0; }
+
+  @media (max-width:400px){ .en-h1 { font-size:33px; } }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="./_ds_bundle.js"></script>
+<script type="text/babel" src="./ds-preview-runtime.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="./ui_kits/freecash-lander-en/LanderEn.jsx"></script>
+<script type="text/babel">
+  function fcMountEn(){
+    if (!window.LanderEn) { return setTimeout(fcMountEn, 30); }
+    try {
+      ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(window.LanderEn));
+    } catch(e){ console.log("FC-EN mount error:", e && e.message); }
+  }
+  fcMountEn();
+</script>
+</body>
+</html>
